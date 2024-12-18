@@ -12,6 +12,11 @@ phases:
       - wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
       - sudo yum localinstall google-chrome-stable_current_x86_64.rpm -y
       - google-chrome --version
+      - echo "Installing Microsoft Edge browser"
+      - sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+      - sudo dnf config-manager --add-repo https://packages.microsoft.com/yumrepos/edge
+      - sudo dnf install microsoft-edge-stable -y
+      - microsoft-edge --version
       - curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
       - sudo python3 get-pip.py
       - pip3 install virtualenv
@@ -29,5 +34,3 @@ phases:
       - echo "Starting tests"
       - cd tests
       - pytest test_change_sign_tag_size.py -v -s
-
-
