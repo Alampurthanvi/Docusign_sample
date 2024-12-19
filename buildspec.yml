@@ -33,4 +33,4 @@ phases:
     commands:
       - echo "Starting tests"
       - cd tests
-      - pytest test_create_new_user.py -v -s
+      - pytest -v -s
