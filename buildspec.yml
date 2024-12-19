@@ -33,4 +33,4 @@ phases:
     commands:
       - echo "Starting tests"
       - cd tests
-      - pytest test_change_sign_tag_size.py -v -s
+      - pytest test_create_new_user.py -v -s
